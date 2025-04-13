@@ -1,108 +1,119 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
 .main {
   width: 100%;
+  min-height: 100vh;
   background: linear-gradient(
       to bottom left,
       rgba(1, 39, 77, 0.5) 50%,
       rgba(57, 128, 214, 0.842) 100%
     ),
-    url(1.png);
-  background-position: center;
-  background-size: cover;
-  height: 109vh;
+    url(1.png) no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
-  width: 1200px;
-  height: 75px;
-  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  /* 
+  display: flex; → navbar হলো flex container।
+  flex-wrap: wrap; → ছোট স্ক্রিনে এলিমেন্ট গুলো নিচে নেমে যেতে পারবে।
+  justify-content: space-between; → logo, menu, search এর মাঝে space থাকবে।
+  align-items: center; → vertically মাঝখানে বসাবে।
+  padding: 20px; → চারপাশে কিছু ফাঁকা জায়গা।
+  color: white; → ভিতরের লেখার রঙ সাদা। 
+  */
 }
 
-.icon {
-  width: 200px;
-  float: left;
-  height: 70px;
-}
-.logo {
+.icon .logo {
   color: #ff7200;
   font-size: 35px;
-  font-family: Arial;
-  padding-left: 20px;
-  float: left;
-  padding-top: 10px;
+  font-weight: bold;
 }
 
-.menu {
-  width: 400px;
-  float: left;
-  height: 70px;
-}
-
-ul {
-  float: left;
+.menu ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-ul li {
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
   list-style: none;
-  margin-left: 62px;
-  margin-top: 27px;
-  font-size: 14px;
+
+  /*
+  display: flex; → Menu items পাশাপাশি বসে।
+  gap: 20px; → প্রতিটির মাঝে ফাঁকা।
+  padding, margin 0 → ভিতরে-বাইরে ফাঁকা নেই।
+  list-style: none; → bullet (●) চিহ্ন সরিয়ে ফেলা। 
+   */
 }
 
-ul li a {
+.menu ul li a {
   text-decoration: none;
   color: #fff;
-  font-family: Arial;
   font-weight: bold;
-  transition: 0.4s ease-in-out;
+  transition: 0.3s;
+
+  /* 
+  text-decoration: none; → underline মুছে ফেলে।
+  color: #fff; → লিংক সাদা।
+  font-weight: bold; → মোটা লেখা।
+  transition: 0.3s; → হোভার এফেক্ট ধীরে হবে।
+   */
 }
 
-ul li a:hover {
+.menu ul li a:hover {
   color: #ff7200;
+  /* hover করলে লিংক কমলা হয়ে যাবে। */
 }
-
 .search {
-  width: 330px;
-  float: left;
-  margin-left: 270px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .srch {
-  font-family: "Times New Roman";
-  width: 200px;
-  height: 40px;
-  background: transparent;
+  height: 35px;
+  padding: 0 10px;
   border: 1px solid #ff7200;
-  margin-top: 13px;
-  color: #fff;
   border-right: none;
+  border-radius: 5px 0 0 5px;
+  background: transparent;
+  color: #fff;
   font-size: 16px;
-  float: left;
-  padding: 10px;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
 }
 
 .btn {
-  width: 100px;
-  height: 40px;
+  height: 35px;
+  padding: 0 15px;
   background: #ff7200;
-  margin-top: 13px;
   color: #fff;
-  font-size: 15px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
 }
-
+.srch:focus,
 .btn:focus {
   outline: none;
 }
-.srch:focus {
-  outline: none;
-}
+
+
+
+
+
+
+
+
