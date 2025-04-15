@@ -106,16 +106,20 @@ html {
 }
 
 .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
   width: 90%; /* স্ক্রিন অনুযায়ী কাজ করবে */
   max-width: 1200px; /* বড় স্ক্রিনে সর্বোচ্চ 1200px */
   margin: auto;
   color: #fff;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
+}
+.content h1 {
+  font-size: 50px;
+  margin-top: 9%;
+  letter-spacing: 2px;
 }
 
 .content .par {
@@ -125,13 +129,6 @@ html {
   letter-spacing: 1.2px;
   line-height: 30px;
 }
-
-.content h1 {
-  font-size: 50px;
-  margin-top: 9%;
-  letter-spacing: 2px;
-}
-
 .content .cn {
   width: 160px;
   height: 40px;
@@ -160,6 +157,7 @@ html {
 }
 
 .form {
+  margin-top: 5%;
   width: 250px;
   height: 380px;
   background: linear-gradient(
@@ -167,9 +165,7 @@ html {
     rgba(0, 0, 0, 0.8) 50%,
     rgba(0, 0, 0, 0.8) 50%
   );
-  position: absolute;
-  top: 20px;
-  left: 870px;
   border-radius: 10px;
   padding: 25px;
 }
+
